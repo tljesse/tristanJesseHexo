@@ -1,0 +1,27 @@
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA=Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="<%= config.description %>">
+	<meta name="author" content="<%= config.author %>">
+	<% if (theme.keywords) { %><meta name="keywords" content="<%= theme.keywords %>"><% } %>
+
+	<link rel="icon" href="favicon/favicon.ico">
+	<meta property="og:site_name" content="<%= config.title %>">
+	<% if (config.subtitle){ %>
+		<meta property="og:title" content="<%= config.subtitle %>">
+	<% } %>
+	<meta property="og:url" content="<%= config.url %>">
+	<meta property="og:type" content="website">
+
+	<title><%= config.title %></title>
+
+	<%- css('css/normalize.css') %>
+  <%- css('css/style.css') %>
+  <%- css('css/font-awesome.css') %>
+
+  <link href="https://fonts.googleapis.com/css?family=Bellefair|Pacifico|Permanent+Marker|Yellowtail" rel="stylesheet">
+  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+	<%- partial('google-analytics') %>
+</head>

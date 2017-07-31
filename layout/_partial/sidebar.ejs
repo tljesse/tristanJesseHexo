@@ -1,0 +1,24 @@
+<!-- @todo make relevent classes and do custom styles -->
+<% if (theme.about_text) {%>
+	<div class="sidebar-module sidebar-module-inset">
+		<h4>About</h4>
+		<p><%= theme.about_text %></p>
+	</div>
+<% } %>
+<% if (site.posts.length) { %>
+	<div class="sidebar-module">
+		<h4>Archives</h4>
+		<%- list_archives() %>
+	</div>
+<% } %>
+<% if (theme.github || theme.upwork || theme.linkedin || theme.facebook) { %>
+	<div class="sidebar-module">
+		<h4>Elsewhere</h4>
+		<ol class="list-unstyled">
+			<% if (theme.github) { %><li><a href="https://github.com/<%= theme.github %>">GitHub</a></li><% } %>
+			<% if (theme.upwork) { %><li><a href="https://www.upwork.com/o/profiles/users/<%= theme.upwork %>/">Upwork</a></li><% } %>
+			<% if (theme.linkedin) { %><li><a href="https://www.linkedin.com/in/<%= theme.linkedin %>">LinkedIn</a></li><% } %>
+			<% if (theme.facebook) { %><li><a href="https://www.facebook.com/<%= theme.facebook %>">Facebook</a></li><% } %>
+		</ol>
+	</div>
+<% } %>

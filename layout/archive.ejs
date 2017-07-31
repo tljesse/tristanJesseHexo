@@ -1,0 +1,15 @@
+<div class="row">
+	<div class="col-8 mb-f blog-main">
+
+		<% page.posts.each(function(item) { %>
+			<%- partial('_partial/article-excerpt', {item: item}) %>
+		<% }); %>
+		<%- partial('_partial/pagination') %>
+	</div>
+	
+	<!-- Sidebar -->
+	<!-- @todo create a grid offset -->
+	<div class="col-4 mb-none blog-sidebar">
+		<%- partial('_partial/sidebar') %>
+	</div>
+</div>

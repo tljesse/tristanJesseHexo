@@ -1,0 +1,77 @@
+/**
+ * Useful Icon sets
+ */
+
+.icon {
+	font-family: FontAwesome;
+	text-decoration: none;
+	//font-size: 30px;
+
+	&#rss-link {
+	  &:before {
+	    content: "\f09e"
+	  }
+	}
+
+	&#twitter-link {
+	  &:before {
+	    content: "\f099"
+	  }
+	}
+
+	&#linkedin-link {
+	  &:before {
+	    content: "\f0e1"
+	  }
+	}
+
+	&#googleplus-link {
+	  &:before {
+	    content: "\f0d5"
+	  }
+	}
+
+	&#github-link {
+	  &:before {
+	    content: "\f09b"
+	  }
+	}
+
+	&#search-btn {
+	  &:before {
+	    content: "\f002"
+	  }
+	}
+
+	&#code-link {
+		&:before {
+			content: "\f121";
+		}
+	}
+
+	&#mail {
+		&:before {
+			content: "\f003";
+		}
+	}
+
+	&#ext-link {
+		&:before {
+			content: "\f08e";
+		}
+	}
+
+	&#game {
+		&:before {
+			content: "\f11b";
+		}
+	}
+
+	&#search {
+		&:before {
+			content: "\f002";
+		}
+	}
+}
+
+

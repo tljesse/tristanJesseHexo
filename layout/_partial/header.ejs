@@ -1,0 +1,31 @@
+<div class="blog-header">
+	<% if (page.title || page.category || page.tag || page.archive) { 
+		var title = '';
+		var subtitle = '';
+		if (page.category) title = page.category;
+		if (page.tag) title = page.tag;
+		if (page.archive){
+			if (page.year) {
+				title = 'Blog';
+				var month = '';
+				if (page.month) {
+					var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+					month = monthNames[page.month - 1];
+				}
+				subtitle = month + ' ' + page.year;
+			}
+			else {
+				title = 'Blog';
+				subtitle = (theme.blog_subtitle) ? theme.blog_subtitle : '';
+			}
+		}
+		if (page.title) title = page.title;
+		if (page.subtitle) subtitle = page.subtitle;
+		%>
+		<h1 class="blog-title"><%= title %></h1>
+		<p class="lead blog-description"><%= subtitle %></p>
+	<% } else { %>
+		<h1 class="blog-title"><%= config.title %></h1>
+		<p class="lead blog-description"><% if (config.subtitle){ %><%= config.subtitle %><% } %></p>
+	<% } %>
+</div>

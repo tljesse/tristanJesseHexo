@@ -1,0 +1,27 @@
+# Header
+menu:
+  About: /
+  Portfolio: /portfolio
+  Blog: /archives
+  Contact: /contact
+
+# Read More text
+excerpt_link: Read More
+
+# customization
+contact_email: 
+about_text: 
+blog_subtitle: 
+keywords: 
+
+# exterior links
+github: 
+upwork: 
+facebook:
+linkedin: 
+
+# Disqus comments
+disqus_shortname: 
+
+# Google Analytics Tracking
+google_analytics: 

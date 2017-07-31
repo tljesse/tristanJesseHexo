@@ -1,0 +1,288 @@
+/**
+ * Main SASS file for the site
+ */
+
+@import "partials/extends";
+
+@import "partials/mixins";
+
+@import "partials/variables";
+
+@import "partials/grid";
+
+@import "partials/alert";
+
+@import "partials/general";
+
+@import "partials/icons";
+
+@import "partials/menu";
+
+* {
+	font-family: 'Bellefair', serif;
+}
+
+h1 {
+	font-family: 'Yellowtail', cursive;
+}
+
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	@include transition(all, 0.5s);
+	&.scrollUp {
+    transform: translateY(-51px);
+	}
+}
+
+.jumbotron {
+	margin-top: 50px;
+  padding-top: 50px;
+  min-height: 550px;
+  background: url('../img/tristan-banner4.png');
+  background-repeat: no-repeat;
+  background-size: 2000px 600px;
+  background-position: center top;
+
+  .blog-header {
+  	max-width: 1000px;
+    width: 90%;
+    margin: 0px auto;
+    text-align: center;
+  }
+}
+
+a {
+	color: $banner-mid;
+	@include transition(color, linear, 0.5s);
+
+	&:hover {
+		color: $banner-green;
+		@include transition(color, linear, 0.5s);
+	}
+}
+
+/**********************
+ * Index styles
+ */
+
+.index-wrap{
+
+	.row {
+		min-height: 200px;
+	}
+ 	.svg-img {
+		width: 150px;
+		height: 150px;
+
+		&.brackets {
+			path {
+				fill: $banner-green;
+			}
+		}
+
+		&.circuit {
+			path, polygon, rect {
+				fill: $banner-mid;
+			}
+		}
+
+		&.pen {
+			path, polygon {
+				fill: $banner-blue;
+			}
+		}
+	}
+}
+
+/**********************
+ * Portfolio styles
+ */
+.portfolio-wrap {
+
+	.row {
+		min-height: 500px;
+		.btn-wrap {
+			a {
+				padding: 0.5em 1em;
+			}
+		}
+	}
+
+	h2 {
+		margin-bottom: 0;
+	}
+	h3 {
+		font-size: 18px;
+	}
+
+	img {
+		max-width: 300px;
+
+		&.placeholder {
+			content: url('http://via.placeholder.com/350x150');
+		}
+	}
+}
+
+/**********************
+ * Blog entry styles
+ */
+
+.blog-tags-container, .blog-categories-container {
+	margin-top: 30px;
+	font-size: 20px;
+
+	a {
+		padding-right: 5px;
+	}
+
+	span {
+		&.glyphicon {
+			margin-right: 20px;
+		}
+	}
+}
+
+.blog-post {
+	margin-bottom: 3em;
+
+	.blog-post-title {
+		margin-bottom: 0;
+		
+		a {
+			@include transition(false);
+			&:hover {
+				color: #262626;
+				@include transition(false);
+			}
+		}
+	}
+
+	// keep the archive page from linking h2
+	h2:not(.blog-post-title) {
+		margin: 20px 0;
+
+		// The hook for linking to spot in page
+		a {
+			&:before{
+				font-family: FontAwesome;
+				text-decoration: none;
+				font-size: 0.6em;
+		    content: "\f0c1";
+		  }
+	  }
+	}
+	.blog-post-title-archive {
+		margin-bottom: 5px;
+		font-size: 25px;
+	}
+}
+
+.blog-archive-title {
+	margin-bottom: 50px;
+}
+
+/*************************
+ * Sidebar styles
+ */
+.blog-sidebar {
+	ul {
+		list-style: none;
+
+		li {
+			margin-left: 0;
+
+			.archive-list-count {
+				display: none;
+			}
+		}
+	}
+}
+
+/*************************
+ * Contact styles
+ */
+
+.contact-wrap {
+	// I only want the form styled on the contact page
+	@import "partials/form";
+
+	.head {
+		margin: 50px auto;
+	}
+}
+
+/*************************
+ * Footer styles
+ */
+
+.blog-footer {
+	text-align: center;
+	padding: 80px 0;
+	color: $gray;
+	background: $banner-green; 
+	p {
+		display: inline-block;
+		padding: 0px 20px;
+
+		&:not(.last) {
+			border-right: 1px solid $gray;
+		}
+
+		a {
+			color: $gray;
+			border-bottom: 1px dotted $gray;
+		}
+	}
+
+	.icons-block {
+		margin-bottom: 20px;
+		a {
+			color: $gray;
+			font-size: 30px;
+			padding: 0px 20px;
+		}
+	}
+}
+
+/******************************
+ * Responsiveness styles
+ */
+.tags-container-bottom {
+	display: block;
+}
+.tags-container-vertical {
+	display: none;
+}
+@media screen and (min-width: 1400px) {
+	.tags-container-vertical {	
+    display: block;
+    position: relative;
+    height: 0;
+    margin-left: -10vw;
+		.tags-sub-container {
+			position: absolute;
+	    text-align: right;
+	    transform-origin: left;
+	    @include transform(rotate(-90deg), translateX(-100%));
+		}
+	}
+
+	.tags-container-bottom {
+		display: none;
+	}
+}
+
+@media (max-width: 767px) {
+	.jumbotron {
+		margin-top: 100px;
+	  padding-top: 0px;
+	  min-height: 350px;
+		background: url('../img/tristan-banner-mobile.png');
+		background-repeat: no-repeat;
+		background-size: 1000px 300px;
+  	background-position: center bottom;
+	}
+}
