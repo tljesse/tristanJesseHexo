@@ -554,6 +554,19 @@ a {
     -o-transition: color, linear, 0.5s, false;
     transition: color, linear, 0.5s, false; }
 
+#cover {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #e3e3e3 url("../img/preload.gif") no-repeat center center;
+  z-index: 9999;
+  font-size: 60px;
+  text-align: center;
+  padding-top: 200px;
+  color: #fff; }
+
 /**********************
  * Index styles
  */

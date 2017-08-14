@@ -28,3 +28,4 @@ If you want to change styles, I have built this theme with [SASS](http://sass-la
 - [Formspree](https://formspree.io/) - Handles the contact for
 - [Animate on Scroll Library](http://michalsnik.github.io/aos/ "AOS Github") - Animations on several pages
 - [Koala](http://koala-app.com/) - Preprocessor for compiling [SASS](http://sass-lang.com/) stylesheets
+- [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) - Format for project changelog

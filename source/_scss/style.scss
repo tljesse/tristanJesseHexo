@@ -63,6 +63,10 @@ a {
 	}
 }
 
+#cover {position: fixed; height: 100%; width: 100%; top:0; left: 0; background: $gray url('../img/preload.gif') no-repeat center center; z-index:9999; 
+    font-size: 60px; text-align: center; padding-top: 200px; color: #fff;
+}
+
 /**********************
  * Index styles
  */

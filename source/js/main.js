@@ -3,6 +3,10 @@ AOS.init({
 	once: true
 });
 
+$(window).on('load', function() {
+    $("#cover").fadeOut(200);
+});
+
 $(document).ready(function () {
   
   'use strict';
